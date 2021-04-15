@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Purchase Order</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/5eb8400bec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="purchaseorder.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="dashboard.html">AMY PHARMACY</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Manage Account</a></li>
+            <li><a href="manageStk.html">Manage Stock</a></li>
+            <li>
+              <a href="manageiteminfo.html">Manage Item Info</a>
+            </li>
+            <li><a href="purchaseorder.html">Purchase Order</a></li>
+            <li class="active">
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  Print Report
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="activityHistory.html">Activity History</a>
+                  <a href="allitem.html">All Items</a>
+                  <a href="purchaseorderhistory.html">Purchase Order History</a>
+                  <a href="transaction.html">Transaction History</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="login.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <br />
+          <br />
+          <p>
+            <a href="#">Purchase</a>
+          </p>
+          <p>
+            <a href="addvendor.html">Add Vendor</a>
+          </p>
+          <p>
+            <button
+              type="button"
+              class="btn btn-link"
+              data-toggle="modal"
+              data-target="#myModal"
+            >
+              Change Vendor
+            </button>
+          </p>
+        </div>
+        <div class="col-sm-10 text-left">
+          <h1>Purchase Order</h1>
+         
+              <div class="invoice-box">
+                <table cellpadding="0" cellspacing="0">
+                  <tr class="top">
+                    <td colspan="4">
+                      <table>
+                        <tr>
+                          <td class="title">
+                            <strong>Mark Zuckerberg</strong><br />
+                            NO. G-10, TINGKAT BAWAH,<br />
+                            PANGSAPURI OREN, 3, Jalan Pantai<br />
+                            Bersih, 13000 Butterworth, Penang<br />
+
+                            <h3>Purchase Order</h3>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td class="logo"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr class="information">
+                    <td colspan="4">
+                      <table>
+                        <tr>
+                          <td>
+                            <strong>VENDOR</strong><br />
+
+                            <strong>
+                              Green Image Organic Entreprise Sdn Bhd
+                              (637824-A)</strong
+                            >
+                            <br />
+                            28-1 & 28-2, Jalan Suria Puchong 6, Perniagaan<br />
+                            Suria Puchong, 47110 Puchong,Selangor Darul<br />
+                            Ehsan, Malaysia<br />
+                            Fax: +603 8959 0788 <br />
+                            Phone: +603 8959 0288
+                          </td>
+                          <td>
+                            <strong>Ship To</strong><br />
+                            <strong>Mark Zuckerberg</strong><br />
+                            NO. G-10, TINGKAT BAWAH,<br />
+                            PANGSAPURI OREN, 3, Jalan Pantai<br />
+                            Bersih, 13000 Butterworth, Penang<br />
+                          </td>
+                          <td>
+                            <strong>P.O. NO:</strong><br />
+                            <strong>DATE:</strong><br />
+                          </td>
+                          <td>
+                            1<br />
+                            15/4/2021
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td id="empty"></td>
+                  </tr>
+                </table>
+
+                <strong>Expected Delivery Date:</strong>
+                <table id="notes" cellpadding="0" cellspacing="0">
+                  <thead class="heading" id="notes">
+                    <td colspan="4">NOTES</td>
+                  </thead>
+                  17/4/2021
+                  <tr class="noteDetails">
+                    <td colspan="4">{{this.comment}}</td>
+                  </tr>
+                  <strong>&nbsp;&nbsp; &nbsp; Shipping Method:</strong>
+                </table>
+
+                {{/if}}
+
+                <table id="items" cellpadding="0" cellspacing="0">
+                  <thead class="heading">
+                    <td>Code</td>
+                    <td>ITEM</td>
+                    <td>QTY</td>
+                    <td>RATE</td>
+                    <td>AMOUNT</td>
+                  </thead>
+
+                  {{#each lineItems}}
+                  <tr class="details">
+                    <td>BIO456456</td>
+                    <td>Biogreen O'Kid Oatmilk</td>
+                    <td>20</td>
+                    <td>25.00</td>
+                    <td>500.00</td>
+                  </tr>
+                  {{/each}}
+
+                  <tr class="total">
+                    <td id="total-comment" colspan="3">
+                      <small>&nbsp;</small>
+                    </td>
+                    <td><strong>Sub Total:</strong></td>
+                    <td><strong>RM 500.00</strong></td>
+                  </tr>
+                  <tr class="total">
+                    <td id="total-comment" colspan="3">
+                      <small>&nbsp;</small>
+                    </td>
+                    <td><strong>Sales Tax:</strong></td>
+                    <td><strong>RM 50.00</strong></td>
+                  </tr>
+                  <tr class="total">
+                    <td id="total-comment" colspan="3">
+                      <small>&nbsp;</small>
+                    </td>
+                    <td><strong>Total:</strong></td>
+                    <td><strong>RM 550.00</strong></td>
+                  </tr>
+                </table>
+
+                <table id="bottom" cellpadding="0" cellspacing="0">
+                  <tr class="details">
+                    <td class="bottom-buffer">Approved By</td>
+                    <td colspan="3">
+                      <div class="underline"></div>
+                    </td>
+                  </tr>
+                  <tr class="details">
+                    <td class="bottom-buffer">Date</td>
+                    <td colspan="3">
+                      <div class="underline"></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <footer class="container-fluid text-center">
+      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+    </footer>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+              <h4 class="modal-title">Vendor Option</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                  <input type="radio" name="vendor" id="biogreen2u">
+                  <label for="biogreen2u">Green Image Organic Entreprise Sdn Bhd (637824-A)</label><br>
+                  <input type="radio" name="vendor" id="zuelligpharma">
+                  <label for="zuelligpharma">ZUELLIG PHARMA SDN BHD</label><br>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Select
+              </button>
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+    <script src="dropdown.js"></script>
+  </body>
+</html>

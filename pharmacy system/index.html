@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Manage Account</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <script
+      src="https://kit.fontawesome.com/5eb8400bec.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="dashboard.html">AMY PHARMACY</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Manage Account</a></li>
+            <li><a href="manageStk.html">Manage Stock</a></li>
+            <li><a href="manageiteminfo.html">Manage Item Info</a></li>
+            <li><a href="purchaseorder.html">Purchase Order</a></li>
+
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  Print Report
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="activityHistory.html">Activity History</a>
+                  <a href="allitem.html">All Items</a>
+                  <a href="purchaseorderhistory.html">Purchase Order History</a>
+                  <a href="transaction.html">Transaction History</a>
+                </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="login.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p>
+            <i class="fas fa-users"></i
+            ><a href="manageteam.html">MANAGE TEAM</a>
+          </p>
+        </div>
+        <div class="col-sm-8 text-left">
+          <h1>Profile Overview</h1>
+          <table>
+            <tr>
+              <th>Name:</th>
+              <td>Mark Zuckerberg</td>
+            </tr>
+            <tr>
+              <th>IC:</th>
+              <td>840514025569</td>
+            </tr>
+
+            <tr>
+              <th>Email:</th>
+              <td>zuckerberg@fb.com.</td>
+            </tr>
+            <tr>
+              <th>Phone No:</th>
+              <td>650-543-4800</td>
+            </tr>
+            <tr>
+              <th>Role:</th>
+              <td>Owner</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <img src="image/prof_pic.jpg" alt="profile pic" />
+          </div>
+          <div class="well">
+            <form action="editprofile.html" method="get">
+              <button><p>EDIT PROFILE</p></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+    </footer>
+    <script src="dropdown.js"></script>
+  </body>
+</html>

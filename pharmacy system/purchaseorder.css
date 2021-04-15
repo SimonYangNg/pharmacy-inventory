@@ -1,0 +1,257 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100vh;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: 100%;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+table {
+  page-break-inside: auto;
+}
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+.invoice-box {
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  font-size: 10px;
+  line-height: 15px;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+.invoice-box table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+.invoice-box table td {
+  padding: 1 10px;
+  vertical-align: top;
+}
+
+.invoice-box table tr.information td:nth-child(3) {
+  text-align: end;
+}
+
+.invoice-box table tr.information td:nth-child(1),
+.invoice-box table tr.information td:nth-child(2),
+.invoice-box table tr.information td:nth-child(4) {
+  text-align: left;
+}
+
+.invoice-box table tr.details td {
+  text-align: left;
+}
+
+.invoice-box table tr.top table td {
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
+}
+
+.invoice-box table tr.top table td.title {
+  padding-bottom: 0px;
+}
+
+.invoice-box table tr.top table tr {
+  margin-bottom: 40px;
+}
+
+.invoice-box table tr.top table tr td:nth-child(1) {
+  text-align: start;
+}
+
+.invoice-box table tr.top table tr td:nth-child(4) {
+  text-align: end;
+}
+
+.invoice-box table tr.top table td.logo {
+  padding-right: 0px;
+  text-align: end;
+  vertical-align: top;
+}
+
+.invoice-box table tr.top table td.title {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.invoice-box table tr.top table td.title h3 {
+  font-size: 24px;
+  line-height: 30px;
+  padding-top: 15px;
+  color: rgb(243, 179, 75);
+  font-weight: normal;
+}
+
+.invoice-box table tr.information table td {
+  padding-bottom: 5px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+tr td#empty {
+  padding-bottom: 40px;
+  border: none;
+  color: #ffffff;
+}
+
+.invoice-box table tr.information table {
+  padding-bottom: 30px;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px solid rgb(243, 179, 75);
+}
+
+.invoice-box table thead.heading td {
+  background: rgb(252, 239, 216);
+  color: rgb(243, 179, 75);
+  border-bottom: 1px solid rgb(243, 179, 75);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.invoice-box table tr.details td,
+.invoice-box table tr.noteDetails td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.invoice-box table tr.details td.last,
+.invoice-box table tr.noteDetails td.last {
+  padding-bottom: 20px;
+}
+
+.invoice-box table tr.item td {
+  border-bottom: 1px solid #eee;
+}
+
+.invoice-box table tr.item.last td {
+  border-bottom: none;
+}
+
+.invoice-box table tr.total td {
+  border-top: 2px solid #eee;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: start;
+}
+
+.invoice-box table tr.total td {
+  text-align: left;
+}
+
+#total-comment {
+  padding-left: 5px;
+}
+
+#notes {
+  padding-bottom: 20px;
+}
+
+#bottom {
+  padding-top: 40px;
+  page-break-before: always;
+}
+
+#bottom tr td.bottom-buffer {
+  padding-right: 50px;
+}
+
+div.underline {
+  padding-top: 20px;
+  border-bottom: 1px solid #000000;
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .invoice-box table tr.top table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .invoice-box table tr.information table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
+@page {
+  size: A4;
+}
+
+@page: last{
+  margin-top: 5cm;
+};
+
+@page: right{
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+};
+
+/** RTL **/
+.rtl {
+  direction: rtl;
+  font-family: Tahoma, "Helvetica Neue", "Helvetica", Helvetica, Arial,
+    sans-serif;
+}
+
+.rtl table {
+  text-align: right;
+}
+
+.rtl table tr td:nth-child(2) {
+  text-align: left;
+}

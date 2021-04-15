@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add New Stock</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5eb8400bec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="manageteam.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="dashboard.html">AMY PHARMACY</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Manage Account</a></li>
+            <li><a href="manageStk.html">Manage Stock</a></li>
+            <li>
+              <a href="manageiteminfo.html">Manage Item Info</a>
+            </li>
+            <li><a href="purchaseorder.html">Purchase Order</a></li>
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  Print Report
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="activityHistory.html">Activity History</a>
+                  <a href="allitem.html">All Items</a>
+                  <a href="purchaseorderhistory.html">Purchase Order History</a>
+                  <a href="transaction.html">Transaction History</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="login.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <br />
+          <br />
+          <p><i class="fas fa-user"></i><a href="index.html">Profile</a></p>
+        </div>
+        <div class="col-sm-10 text-left">
+          <h2>Manage Team</h2>
+          <div class="container">
+            <table>
+              <tr class="table-title">
+                <th class="user-name">
+                  <p>USER</p>
+                </th>
+                <th class="user-role">ROLE</th>
+                <th class="user-staus">STATUS</th>
+                <th class="user-last-active">LAST ACTIVE</th>
+                <th class="btn-option">&nbsp;</th>
+              </tr>
+
+              <tr class="table-title">
+                <th class="user-name">
+                  <div class="icon">RL</div>
+                  <p>Ryan Lim</p>
+                </th>
+                <th class="user-role">Staff</th>
+                <th class="user-staus">Accepted</th>
+                <th class="user-last-active">15/4/2021</th>
+                <th class="btn-option">
+                  <div class="btn edit"><i class="fas fa-pencil-alt"></i></div>
+                  <div class="btn bin"><i class="fas fa-trash"></i></div>
+                </th>
+              </tr>
+              <tr class="table-title">
+                <th class="user-name">
+                  <div class="icon">AB</div>
+                  <p>Abu Bakar</p>
+                </th>
+                <th class="user-role">Staff</th>
+                <th class="user-staus">Pending Acceptance</th>
+                <th class="user-last-active">15/4/2021</th>
+                <th class="btn-option">
+                  <div class="btn check"><i class="fas fa-check"></i></div>
+                  <div class="btn times"><i class="fas fa-times"></i></div>
+                </th>
+              </tr>
+              <tr class="table-title">
+                <th class="user-name">
+                  <div class="icon">HP</div>
+                  <p>Harry Potter</p>
+                </th>
+                <th class="user-role">Staff</th>
+                <th class="user-staus">Accepted</th>
+                <th class="user-last-active">15/4/2021</th>
+                <th class="btn-option">
+                  <div class="btn edit"><i class="fas fa-pencil-alt"></i></div>
+                  <div class="btn bin"><i class="fas fa-trash"></i></div>
+                </th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+    </footer>
+    <script src="dropdown.js"></script>
+  </body>
+</html>

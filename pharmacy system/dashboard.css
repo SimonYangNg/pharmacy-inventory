@@ -1,0 +1,169 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100vh;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+.col-sm-10 {
+  left: 10%;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+.card-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin: 25px 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+.icon {
+  font-size: 2rem;
+}
+.icon.file {
+  color: rgb(45, 143, 170);
+}
+.icon.folder {
+  color: rgb(245, 193, 82);
+}
+.icon.group {
+  color: rgb(150, 64, 231);
+}
+.icon.bill {
+  color: rgb(243, 132, 76);
+}
+.rect {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file .rect {
+  background-color: rgb(200, 230, 238);
+}
+.folder .rect {
+  background-color: rgb(254, 238, 203);
+}
+.group .rect {
+  background-color: rgb(237, 219, 254);
+}
+.bill .rect {
+  background-color: rgb(253, 227, 214);
+}
+.number {
+  font-weight: bold;
+  font-size: 5rem;
+}
+.text {
+  opacity: 0.6;
+}
+h3 {
+  margin-left: 15%;
+}
+table {
+  margin: 2rem;
+  margin-left: 15%;
+}
+tr {
+  border: 1px solid rgb(179, 156, 156);
+}
+
+.desc {
+  padding: 1.5rem;
+  width: 69%;
+}
+.user {
+  padding-right: 2rem;
+}
+.time {
+  padding-right: 2rem;
+}
+.recent-item {
+  width: 75%;
+  margin: 5% 0 2rem 15%;
+}
+.recent-item h3 {
+  margin-left: 0;
+}
+.recent-item-cardholder {
+  display: flex;
+  flex-direction: row;
+}
+.recent-item-card {
+  width: 200px;
+  height: 250px;
+  background: white;
+  margin-right: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.recent-item-image {
+  width: 195px;
+  height: 125px;
+  background: rgb(230, 230, 240);
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recent-item-image i {
+  font-size: 4rem;
+}
+.recent-item-desc {
+  margin: 8% 0 -10% 10%;
+  width: 100%;
+}
+.recent-item-name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.recent-item-note {
+  font-size: 1.5rem;
+  color: rgb(148, 151, 165);
+}
+body {
+  font-family: "Poppins", sans-serif;
+}

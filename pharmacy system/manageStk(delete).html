@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delete Stock</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="managestock(staff).css" />
+    <link rel="stylesheet" href="dropdown.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="dashboard.html">AMY PHARMACY</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Manage Account</a></li>
+            <li class="active"><a href="manageStk.html">Manage Stock</a></li>
+            <li><a href="manageiteminfo.html">Manage Item Info</a></li>
+            <li><a href="purchaseorder.html">Purchase Order</a></li>
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  Print Report
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="activityHistory.htmls">Activity History</a>
+                  <a href="allitem.html">All Items</a>
+                  <a href="purchaseorderhistory.html">Purchase Order History</a>
+                  <a href="transaction.html">Transaction History</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="login.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p>
+            <a
+              href="manageStk.html"
+              onclick="alert('The stock is successufully deleted from the system.')"
+              >DELETE</a
+            >
+          </p>
+          <p><a href="manageStk(delete).html">CLEAR</a></p>
+          <p><a href="manageStk.html">CANCEL</a></p>
+        </div>
+        <div class="col-sm-10 text-left">
+          <h1>Stock</h1>
+
+          <table>
+            <tr>
+              <th>Select</th>
+              <th class="no">No.</th>
+              <th class="no">Category</th>
+              <th class="pd" colspan="2">Product Name</th>
+              <th class="quan">Quantity</th>
+              <th class="quan">Product Expiry</th>
+              <th class="up">Unit Price</th>
+            </tr>
+            <tr>
+              <td class="dot">
+                <form action="#">
+                  <input type="checkbox" name="delete" id="delete" />
+                </form>
+              </td>
+              <td>1.</td>
+              <td>Stomach Care</td>
+              <td>
+                <img src="image/actal.JPG" alt="actal" style="width: 100px" />
+              </td>
+              <td style="text-align: justify; padding: 3rem">
+                Actal Plus Fast Acting Antacid, 20 tablets
+              </td>
+              <td>50 box</td>
+              <td>12/5/2022</td>
+              <td>RM25</td>
+            </tr>
+            <tr>
+              <td class="dot">
+                <form action="#">
+                  <input type="checkbox" name="delete" id="delete" />
+                </form>
+              </td>
+              <td>2.</td>
+              <td>Vitamin & Supplements</td>
+              <td>
+                <img
+                  src="image/pharmaton.JPG"
+                  alt="actal"
+                  style="width: 100px"
+                />
+              </td>
+              <td style="text-align: justify; padding: 3rem">
+                Pharmaton Caps 100s
+              </td>
+              <td>100 box</td>
+              <td>20/3/2022</td>
+              <td>RM240</td>
+            </tr>
+            <tr>
+              <td class="dot">
+                <form action="#">
+                  <input type="checkbox" name="delete" id="delete" />
+                </form>
+              </td>
+              <td>3.</td>
+              <td>Stomach Care</td>
+              <td>
+                <img src="image/gavis.JPG" alt="actal" style="width: 100px" />
+              </td>
+              <td style="text-align: justify; padding: 3rem">
+                Gaviscon Double Action Liquid Sachets, 5x10ml
+              </td>
+              <td>80 box</td>
+              <td>20/12/2021</td>
+              <td>RM36</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+    </footer>
+    <script src="dropdown.js"></script>
+  </body>
+</html>
