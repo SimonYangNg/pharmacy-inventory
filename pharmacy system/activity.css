@@ -76,9 +76,32 @@ th {
 .times {
   background: red;
 }
-.fa-print {
+.sidenav i {
   margin-right: 1rem;
 }
+.edit-sup,
+.delete-sup {
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 1rem;
+}
+.edit-sup {
+  background-color: lightskyblue;
+}
+.delete-sup {
+  background-color: orangered;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
@@ -87,5 +110,10 @@ th {
   }
   .row.content {
     height: auto;
+  }
+}
+@media print {
+  .noprint {
+    display: none;
   }
 }

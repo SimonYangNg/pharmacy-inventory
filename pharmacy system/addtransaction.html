@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Edit item info</title>
+    <title>New Transaction</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -16,11 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="https://kit.fontawesome.com/5eb8400bec.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="managestock(staff).css" />
+    <link rel="stylesheet" href="activity.css" />
     <link rel="stylesheet" href="dropdown.css" />
   </head>
   <body>
@@ -43,12 +44,12 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Manage Account</a></li>
             <li><a href="manageStk.html">Manage Stock</a></li>
-            <li class="active">
+            <li>
               <a href="manageiteminfo.html">Manage Item Info</a>
             </li>
             <li><a href="purchaseorder.html">Purchase Order</a></li>
             <li><a href="point_of_sales.html">Point Of Sale</a></li>
-            <li>
+            <li class="active">
               <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">
                   Print Report
@@ -77,93 +78,72 @@
 
     <div class="container-fluid text-center">
       <div class="row content">
-        <div class="col-sm-2 sidenav">
-          <br />
-          <br />
-          <p><a href="#">EDIT ITEM INFO</a></p>
-          <p><a href="manageiteminfo.html">SAVE</a></p>
-        </div>
-        <div class="col-sm-10 text-left">
-          <h1>Edit Item Info</h1>
-
-          <table>
-            <tr>
-              <th class="no">No.</th>
-              <th class="no">Category</th>
-              <th class="pd" colspan="2">Product Name</th>
-              <th class="quan">Quantity</th>
-              <th class="quan">Product Expiry</th>
-              <th class="up">Unit Price</th>
-            </tr>
-            <tr>
-              <td>1.</td>
-              <td>Stomach Care</td>
-              <td>
-                <img src="image/actal.JPG" alt="actal" style="width: 100px" />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Actal Plus Fast Acting Antacid, 20 tablets"
-                ></textarea>
-              </td>
-              <td>50 box</td>
-              <td>12/5/2022</td>
-              <td>RM25</td>
-            </tr>
-            <tr>
-              <td>2.</td>
-              <td>Vitamin & Supplements</td>
-              <td>
-                <img
-                  src="image/pharmaton.JPG"
-                  alt="actal"
-                  style="width: 100px"
-                />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Pharmaton Caps 100s"
-                ></textarea>
-              </td>
-              <td>100 box</td>
-              <td>20/3/2022</td>
-              <td>RM240</td>
-            </tr>
-            <tr>
-              <td>3.</td>
-              <td>Stomach Care</td>
-              <td>
-                <img src="image/gavis.JPG" alt="actal" style="width: 100px" />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Gaviscon Double Action Liquid Sachets, 5x10ml"
-                ></textarea>
-              </td>
-              <td>80 box</td>
-              <td>20/12/2021</td>
-              <td>RM36</td>
-            </tr>
-          </table>
+        <div class="noprint"></div>
+        <div class="col-sm-12">
+          <h2>New Transaction</h2>
+          <div class="container">
+            <form action="transaction.html">
+              <table>
+                <tr>
+                  <th>Ref</th>
+                  <th>From</th>
+                  <th>To</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input type="text" placeholder="ref no" /><br />
+                    <input type="text" placeholder="date" /><br />
+                    <input type="text" placeholder="time" /><br />
+                  </th>
+                  <th><input type="text" placeholder="sender acc" /></th>
+                  <th>
+                    <input type="text" placeholder="receipient acc" /><br />
+                    <input type="text" placeholder="receipient name" />
+                  </th>
+                </tr>
+                <tr>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      list="pymtype"
+                      name="pymtype"
+                      placeholder="payment type"
+                    />
+                    <datalist id="pymtype">
+                      <option value="Online Banking"></option>
+                      <option value="Cash"></option>
+                      <option value="Debit/credit"></option>
+                    </datalist>
+                  </th>
+                  <th>
+                    <input list="status" name="status" placeholder="status" />
+                    <datalist id="status">
+                      <option value="successful"></option>
+                      <option value="un-successful"></option>
+                    </datalist>
+                  </th>
+                  <th>
+                    <input type="number" placeholder="amount" />
+                  </th>
+                </tr>
+              </table>
+              <input type="submit" value="Add" />
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <footer class="container-fluid text-center">
-      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
-    </footer>
+    <div class="noprint">
+      <footer class="container-fluid text-center">
+        <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+      </footer>
+    </div>
+
     <script src="dropdown.js"></script>
   </body>
 </html>

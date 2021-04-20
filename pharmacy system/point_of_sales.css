@@ -1,0 +1,114 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 84.5vh;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: 100%;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+.search-container {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 32, 37, 0.15);
+  align-items: center;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  margin-left: 2rem;
+  font-size: 17px;
+  border: 1px solid rgb(155, 144, 144);
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  padding: 7.5px 10px;
+  margin-left: -4px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+.item_list {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 32, 37, 0.15);
+}
+
+table {
+  width: 95%;
+  margin: 2rem;
+}
+
+.item_list tr {
+  border-bottom: 1px solid rgb(179, 169, 169);
+}
+.item_list th,
+.item_list td {
+  padding: 1rem;
+}
+.fa-trash-alt {
+  color: red;
+  font-size: 2rem;
+}
+.calculate {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 32, 37, 0.15);
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 7rem;
+  padding: 2rem 1rem;
+}
+.calculate table {
+  height: 100%;
+  width: 90%;
+}
+.calculate tr {
+  border-bottom: 1px solid rgb(179, 169, 169);
+}
+.calculate th,
+.calculate td {
+  padding: 1rem;
+}
