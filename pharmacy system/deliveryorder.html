@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Edit item info</title>
+    <title>Good Received History</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -16,11 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="https://kit.fontawesome.com/5eb8400bec.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="managestock(staff).css" />
+    <link rel="stylesheet" href="activity.css" />
     <link rel="stylesheet" href="dropdown.css" />
   </head>
   <body>
@@ -43,12 +44,12 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Manage Account</a></li>
             <li><a href="manageStk.html">Manage Stock</a></li>
-            <li class="active">
+            <li>
               <a href="manageiteminfo.html">Manage Item Info</a>
             </li>
             <li><a href="purchaseorder.html">Purchase Order</a></li>
             <li><a href="point_of_sales.html">Point Of Sale</a></li>
-            <li>
+            <li class="active">
               <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">
                   Print Report
@@ -77,93 +78,50 @@
 
     <div class="container-fluid text-center">
       <div class="row content">
-        <div class="col-sm-2 sidenav">
-          <br />
-          <br />
-          <p><a href="#">EDIT ITEM INFO</a></p>
-          <p><a href="manageiteminfo.html">SAVE</a></p>
+        <div class="noprint">
+          <div class="col-sm-2 sidenav">
+            <br />
+            <br />
+            <p>
+              <i class="fas fa-plus"></i
+              ><a href="adddeliveryord.html">New Good Received</a>
+            </p>
+            <p onclick="window.print()">
+              <i class="fas fa-print"></i><a href="#">Print Report</a>
+            </p>
+          </div>
         </div>
         <div class="col-sm-10 text-left">
-          <h1>Edit Item Info</h1>
+          <h2>Good Received History</h2>
+          <div class="container">
+            <table>
+              <tr>
+                <th>Delivery Order#</th>
+                <th>Date</th>
+                <th>Supplier ID</th>
+                <th>Item Quantity</th>
+                <th>Delived Qty</th>
+              </tr>
+              <tr class="clickable-row" data-href="deliveryorderdetails.html">
+                <th>001</th>
+                <th>15/4/2021</th>
 
-          <table>
-            <tr>
-              <th class="no">No.</th>
-              <th class="no">Category</th>
-              <th class="pd" colspan="2">Product Name</th>
-              <th class="quan">Quantity</th>
-              <th class="quan">Product Expiry</th>
-              <th class="up">Unit Price</th>
-            </tr>
-            <tr>
-              <td>1.</td>
-              <td>Stomach Care</td>
-              <td>
-                <img src="image/actal.JPG" alt="actal" style="width: 100px" />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Actal Plus Fast Acting Antacid, 20 tablets"
-                ></textarea>
-              </td>
-              <td>50 box</td>
-              <td>12/5/2022</td>
-              <td>RM25</td>
-            </tr>
-            <tr>
-              <td>2.</td>
-              <td>Vitamin & Supplements</td>
-              <td>
-                <img
-                  src="image/pharmaton.JPG"
-                  alt="actal"
-                  style="width: 100px"
-                />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Pharmaton Caps 100s"
-                ></textarea>
-              </td>
-              <td>100 box</td>
-              <td>20/3/2022</td>
-              <td>RM240</td>
-            </tr>
-            <tr>
-              <td>3.</td>
-              <td>Stomach Care</td>
-              <td>
-                <img src="image/gavis.JPG" alt="actal" style="width: 100px" />
-              </td>
-              <td style="text-align: justify; padding: 3rem">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Gaviscon Double Action Liquid Sachets, 5x10ml"
-                ></textarea>
-              </td>
-              <td>80 box</td>
-              <td>20/12/2021</td>
-              <td>RM36</td>
-            </tr>
-          </table>
+                <th>001</th>
+                <th>1</th>
+                <th>20</th>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
 
-    <footer class="container-fluid text-center">
-      <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
-    </footer>
+    <div class="noprint">
+      <footer class="container-fluid text-center">
+        <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
+      </footer>
+    </div>
+    <script src="link.js"></script>
     <script src="dropdown.js"></script>
   </body>
 </html>

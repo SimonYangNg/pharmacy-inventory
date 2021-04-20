@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
@@ -47,7 +47,8 @@
             <li>
               <a href="manageiteminfo.html">Manage Item Info</a>
             </li>
-            <li><a href="purchaseorder.html">Purchase Order</a></li>
+            <li class="active"><a href="purchaseorder.html">Purchase Order</a></li>
+            <li ><a href="point_of_sales.html">Point Of Sale</a></li>
             <li class="active">
               <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">
@@ -57,6 +58,8 @@
                   <a href="activityHistory.html">Activity History</a>
                   <a href="allitem.html">All Items</a>
                   <a href="purchaseorderhistory.html">Purchase Order History</a>
+                  <a href="invoice.html">Invoice History</a>
+                  <a href="deliveryorder.html">Good Received History</a>
                   <a href="transaction.html">Transaction History</a>
                 </div>
               </div>
@@ -65,7 +68,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="login.html"
-                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+                ><span class="glyphicon glyphicon-log-in"></span> Log Out </a
               >
             </li>
           </ul>
@@ -75,11 +78,12 @@
 
     <div class="container-fluid text-center">
       <div class="row content">
+        <div class="noprint">
         <div class="col-sm-2 sidenav">
           <br />
           <br />
-          <p>
-            <a href="#">Purchase</a>
+          <p onclick="window.print()">
+            <a href="#">Export</a>
           </p>
           <p>
             <a href="addvendor.html">Add Vendor</a>
@@ -94,7 +98,12 @@
               Change Vendor
             </button>
           </p>
+          <p>
+            <a href="supplierlist.html">Supplier List</a>
+          </p>
+
         </div>
+      </div>
         <div class="col-sm-10 text-left">
           <h1>Purchase Order</h1>
          
@@ -148,10 +157,12 @@
                           <td>
                             <strong>P.O. NO:</strong><br />
                             <strong>DATE:</strong><br />
+                            <strong>User:</strong><br />
                           </td>
                           <td>
                             1<br />
-                            15/4/2021
+                            15/4/2021<br>
+                            <input type="text" placeholder="user">
                           </td>
                         </tr>
                       </table>
@@ -170,12 +181,12 @@
                   </thead>
                   17/4/2021
                   <tr class="noteDetails">
-                    <td colspan="4">{{this.comment}}</td>
+                    <td colspan="4">&nbsp;</td>
                   </tr>
                   <strong>&nbsp;&nbsp; &nbsp; Shipping Method:</strong>
                 </table>
 
-                {{/if}}
+                &nbsp;
 
                 <table id="items" cellpadding="0" cellspacing="0">
                   <thead class="heading">
@@ -186,15 +197,15 @@
                     <td>AMOUNT</td>
                   </thead>
 
-                  {{#each lineItems}}
+                  &nbsp;
                   <tr class="details">
-                    <td>BIO456456</td>
-                    <td>Biogreen O'Kid Oatmilk</td>
-                    <td>20</td>
-                    <td>25.00</td>
-                    <td>500.00</td>
+                    <td><input type="text" placeholder="BIO456456"> </td>
+                    <td><input type="text" placeholder="Biogreen O'Kid Oatmilk"></td>
+                    <td><input type="number" placeholder="20"></td>
+                    <td><input type="number" placeholder="25"></td>
+                    <td><input type="number" placeholder="500.00"></td>
                   </tr>
-                  {{/each}}
+                  &nbsp;
 
                   <tr class="total">
                     <td id="total-comment" colspan="3">
@@ -219,30 +230,19 @@
                   </tr>
                 </table>
 
-                <table id="bottom" cellpadding="0" cellspacing="0">
-                  <tr class="details">
-                    <td class="bottom-buffer">Approved By</td>
-                    <td colspan="3">
-                      <div class="underline"></div>
-                    </td>
-                  </tr>
-                  <tr class="details">
-                    <td class="bottom-buffer">Date</td>
-                    <td colspan="3">
-                      <div class="underline"></div>
-                    </td>
-                  </tr>
-                </table>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
- 
+    
+    <div class="noprint">
     <footer class="container-fluid text-center">
       <p><small>&copy; Copyright 2021, AMY PHARMACY SDN BHD</small></p>
     </footer>
+  </div>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
           <!-- Modal content-->
@@ -278,6 +278,9 @@
               </button>
             </div>
           </div>
+          
+          
+        
     <script src="dropdown.js"></script>
   </body>
 </html>
