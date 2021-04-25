@@ -52,11 +52,15 @@ tfoot {
 .invoice-box {
   max-width: 1000px;
   margin: auto;
+  padding: 3rem;
   width: 100%;
   font-size: 10px;
   line-height: 15px;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   color: #555;
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
 }
 
 .invoice-box table {

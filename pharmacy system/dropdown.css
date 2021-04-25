@@ -40,5 +40,11 @@
   display: block;
 }
 body {
-  background-color: rgb(245, 247, 250);
+  /* background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
